@@ -3,9 +3,7 @@ STDOUT equ 1
 SYS_EXIT equ 0x3c
 
 section	.data
-endl db 10, 0
 msg db 0, 0, '1', 10, 0
-msglen db 5
 
 section	.text
    global _start
@@ -52,7 +50,7 @@ print:
    mov rax, SYS_WRITE
    mov rdi, STDOUT
    mov rsi, msg
-   mov rdx, [msglen]
+   mov rdx, 5 ; msg length is always 5
    syscall
    ret
 
