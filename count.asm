@@ -1,3 +1,4 @@
+; old file for archive not to run
 SYS_WRITE equ 1
 STDOUT equ 1
 SYS_EXIT equ 0x3c
