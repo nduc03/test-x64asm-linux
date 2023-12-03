@@ -11,7 +11,7 @@ DIV_15 equ 3
 NODIV equ 0
 
 section	.data
-prompt db "FizzBuzz - Enter number from 1-127: "
+prompt db "FizzBuzz - Enter number from 1 to 127: "
 promptLen equ $-prompt
 num db 0, 0, '1', 10, 0
 numLen equ $-num
@@ -116,7 +116,7 @@ div3:
     mov rcx, DIV_3
     ret
 
-stoi: ; only stoi from 1 - 128, return value at rax
+stoi: ; only stoi from 1 - 127, return value at rax
     mov rax, 0
     mov al, byte [input]
     sub al, '0'
